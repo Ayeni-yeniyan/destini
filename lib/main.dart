@@ -26,8 +26,7 @@ class _StoryPageState extends State<StoryPage> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/background.jpg'),
-                fit: BoxFit.fill)),
+                image: AssetImage('assets/images/back.jpg'), fit: BoxFit.fill)),
         padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
         constraints: BoxConstraints.expand(),
         child: SafeArea(
@@ -63,8 +62,6 @@ class _StoryPageState extends State<StoryPage> {
               SizedBox(height: 20.0),
               Expanded(
                 flex: 2,
-                //TODO: Step 26 - Use a Flutter Visibility Widget to wrap this FlatButton.
-                //TODO: Step 28 - Set the "visible" property of the Visibility Widget to equal the output from the buttonShouldBeVisible() method in the storyBrain.
                 child: Visibility(
                   visible: storyBrain.visibleButton(),
                   child: TextButton(
@@ -88,7 +85,3 @@ class _StoryPageState extends State<StoryPage> {
     );
   }
 }
-
-//TODO: Step 24 - Run the app and try to figure out what code you need to add to this file to make the story change when you press on the choice buttons.
-
-//TODO: Step 29 - Run the app and test it against the Story Outline to make sure you've completed all the steps. The code for the completed app can be found here: https://github.com/londonappbrewery/destini-challenge-completed/
