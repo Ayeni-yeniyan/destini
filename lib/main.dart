@@ -48,6 +48,7 @@ class _StoryPageState extends State<StoryPage> {
               Expanded(
                 flex: 2,
                 child: TextButton(
+                  style: TextButton.styleFrom(foregroundColor: Colors.white),
                   onPressed: () {
                     setState(() => storyBrain.nextStory(1));
                   },
@@ -65,6 +66,7 @@ class _StoryPageState extends State<StoryPage> {
                 child: Visibility(
                   visible: storyBrain.visibleButton(),
                   child: TextButton(
+                    style: TextButton.styleFrom(foregroundColor: Colors.white),
                     onPressed: () {
                       setState(() => storyBrain.nextStory(2));
                     },
